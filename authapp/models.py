@@ -15,8 +15,9 @@ def create_user_profile(sender, instance, created, **kwargs):
 
 
 
-class UserProfile(models.Model):  
+class UserProfile(models.Model): 
     user = models.ForeignKey(User, on_delete =models.CASCADE)
     isTeacher = models.BooleanField(default=False)
     phone = models.CharField(max_length=20, default="")
     subject = models.CharField(max_length=20, blank=True, null=True)
+    isFeaturePhone = models.BooleanField(default=False)
