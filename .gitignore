@@ -26,3 +26,4 @@ Team*.zip
 *.crt
 *.key
 *.ovpn
+.vscode/settings.json

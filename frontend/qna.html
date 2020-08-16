@@ -1,0 +1,158 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <title>Teachers Portal</title>
+  <style>
+      header{
+          background:url(img/quiz.jpg);
+          background-size:cover ;
+          background-repeat: no-repeat;
+          min-height: 800px;
+          background-position: center;
+      }
+      @media screen and (max-width:670px){
+          header{
+              min-height: 500px;
+          }
+      }
+      #title{
+          font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+      .section{
+          padding-top:4vw;
+          padding-bottom:4vw;
+      }
+  </style>
+</head>
+<body>
+ 
+  <!-- navbar -->
+  <header>
+        <nav class="nav-wrapper transparent">
+                <div class="container">
+                    <a href="base.html" class="brand-logo black-text" id="title">Teacher's PORTAL</a>
+                    <a href="" class="sidenav-trigger" data-target="mobile-menu">
+                            <i class="material-icons left" >menu</i>
+                    </a>
+                    
+                    <ul class="hide-on-med-and-down  right grey-text text-grey-darken-3">
+                        <li class="grey-text grey-darken-3"><a href="#photos">Announcements</a></li>
+                        <li class="grey-text grey-darken-3"><a href="#services">Resources</a></li>
+                        <li class="grey-text grey-darken-3"><a href="#contact">Analysis</a></li>
+                        <li class="grey-text grey-darken-3" ><a href='#' class="tooltipped btn-floating btn-small brown " data-tooltip="Your Profile"><i class="material-icons">person</i></a></li>
+                    </ul>
+                    <ul class="sidenav grey lighten-2 "  id="mobile-menu">
+                            <li><a href="#photos">Announcements</a></li>
+                            <li><a href="#services">Resources</a></li>
+                            <li><a href="#contact">Analysis</a></li>
+                    </ul>
+
+                </div>
+            </nav>
+</header>
+
+  
+
+<br><br>
+    
+ 
+
+<!-- contact form -->
+<section class="section container scrollspy" id="message">
+    <div class="row">
+        <div class="col l5 s12">
+            <h2 class="teal-text text darken-4">Have a Question?</h2>
+            <h5>Form a Question and post it ! It will be sent to the students to their available chat or message platform. </h5>
+            <hr>
+        </div>
+
+        <div class="col s12 l5 offset-l2">
+                
+                <form action="post">
+                    <div class="input-field">
+                        <i class="material-icons prefix ">help</i>
+    
+                            <textarea name="" id="question" cols="50" rows="10" class="materialize-textarea"></textarea>
+                            <label for="question">Type your Question Here..</label>
+                        </div>           
+                    
+                  <br>
+                    <div class="input-field offset-l2">
+                    <i class="material-icons prefix ">radio_button_checked</i>
+
+                        <textarea name="" id="opt1" cols="20" rows="10" class="materialize-textarea"></textarea>
+                        <label for="opt1">Option 1</label>
+                    </div>
+
+                    
+                    <div class="input-field offset-l2">
+                        <i class="material-icons prefix ">radio_button_checked</i>
+    
+                            <textarea name="" id="opt2" cols="20" rows="10" class="materialize-textarea"></textarea>
+                            <label for="opt2">Option 2</label>
+                        </div>
+    
+                   
+                        <div class="input-field offset-l2">
+                            <i class="material-icons prefix ">radio_button_checked</i>
+         
+                                <textarea name="" id="opt3" cols="20" rows="10" class="materialize-textarea"></textarea>
+                                <label for="opt3">Option 3</label>
+                            </div>
+        
+                         <div class="input-field offset-l2">
+                                <i class="material-icons prefix ">radio_button_checked</i>
+             
+                                    <textarea name="" id="opt4" cols="20" rows="10" class="materialize-textarea"></textarea>
+                                    <label for="opt4">Option 4</label>
+                        </div>
+                        <br>
+                        <div class="input-field offset-l2">
+                            <i class="material-icons prefix ">check</i>
+         
+                                <input type="number" id="ans" cols="20" rows="10" class="materialize-textarea"></textarea>
+                                <label for="ans">Enter the correct answer option</label>
+                        </div>
+                        <br><br>
+                        
+                         <div class="input-field center">
+                             <button class="btn teal darken-3">Post Question!</button>
+                         </div>
+                </form>
+        </div>
+    </div>
+</section>
+ 
+  <!-- footer -->
+  <footer class="page-footer indigo darken-3">
+     
+      <div class="center-align container">&copy; 2020 TeachersPortal</div>
+  </footer>
+
+  <!-- Compiled and minified JavaScript -->
+   
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function(){
+        $('.sidenav').sidenav();
+        $('.materialboxed').materialbox();
+        $('.parallax').parallax();
+        $('.tabs').tabs();
+        $('.datepicker').datepicker({
+            disableWeekends:true
+        });
+        $('.tooltipped').tooltip();
+        $('.scrollspy').scrollSpy();
+    });
+  </script>
+</body>
+</html>

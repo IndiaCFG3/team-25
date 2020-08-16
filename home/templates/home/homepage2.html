@@ -1,3 +1,4 @@
+{% load static %}
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -12,7 +13,7 @@
   <title>Teachers Portal</title>
   <style>
       header{
-          background:url(img/studydesk.jpg);
+          background:url("/static/home/img/studydesk.jpg");
           background-size:cover ;
           background-repeat: no-repeat;
           min-height: 700px;
@@ -70,16 +71,16 @@
 </div>
 <br><br>
 <div class="carousel center">
-        <a class="carousel-item" href="#one!"><img src="img/1.png"></a>
-        <a class="carousel-item" href="#two!"><img src="img/2.png"></a>
-        <a class="carousel-item" href="#three!"><img src="img/3.png"></a>
-        <a class="carousel-item" href="#four!"><img src="img/4.png"></a>
-        <a class="carousel-item" href="#five!"><img src="img/5.png"></a>
-        <a class="carousel-item" href="#six!"><img src="img/6.png"></a>
-        <a class="carousel-item" href="#seven!"><img src="img/7.png"></a>
-        <a class="carousel-item" href="#eight!"><img src="img/8.png"></a>
-        <a class="carousel-item" href="#nine!"><img src="img/9.png"></a>
-        <a class="carousel-item" href="#ten!"><img src="img/10.png"></a>
+        <a class="carousel-item" href="#one!"><img src="{% static 'home/img/1.png' %}"></a>
+        <a class="carousel-item" href="#two!"><img src="{% static 'home/img/2.png' %}"></a>
+        <a class="carousel-item" href="#three!"><img src="{% static 'home/img/3.png' %}"></a>
+        <a class="carousel-item" href="#four!"><img src="{% static 'home/img/4.png' %}"></a>
+        <a class="carousel-item" href="#five!"><img src="{% static 'home/img/5.png' %}"></a>
+        <a class="carousel-item" href="#six!"><img src="{% static 'home/img/6.png' %}"></a>
+        <a class="carousel-item" href="#seven!"><img src="{% static 'home/img/7.png' %}"></a>
+        <a class="carousel-item" href="#eight!"><img src="{% static 'home/img/8.png' %}"></a>
+        <a class="carousel-item" href="#nine!"><img src="{% static 'home/img/9.png' %}"></a>
+        <a class="carousel-item" href="#ten!"><img src="{% static 'home/img/10.png' %}"></a>
       </div>
 
   <!-- footer -->
