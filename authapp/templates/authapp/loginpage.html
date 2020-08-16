@@ -12,14 +12,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <title>Login Page</title>
+  <style>
+      header{
+          background:white;
+          background-size:cover ;
+          background-repeat: no-repeat;
+          min-height: 90px;
+          background-position: center;
+      }
+      @media screen and (max-width:670px){
+          header{
+              min-height: 500px;
+          }
+      }
+      .title{
+          font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      }
+      .section{
+          padding-top:4vw;
+          padding-bottom:4vw;
+      }
 
+    .size{
+        height:200vw;
+        width: 200vw;
+    }
+  </style>
 
 </head>
 
 <body>
-  <div class="container">
     <div class="row">
-      <h1 class="center-align">Login!</h1>
+        <div class="row teal-lighten-3 title z-depth-3" style="background-color: rgb(108, 163, 163);padding:4vw" >
+            <h4 class="center White-text "><u><b>Teacher's Portal</b></u></h4>
+            <h5 class="center-align">A portal that not only aims to provide equitable education to <br>
+              all the children in remote areas but also aids the teachers <br>
+              and volunteers registered to manage and track the student's progress in the crisis<br>
+                caused due to Covid - 19</h5>
+        </div>
+    </div>
+
+  <div class="container">
+    
+      
+
+    <div class="row">
+
+      <h3 class="center-align">Login!</h3>
       <form class="col s12" id="reg-form" method="POST">
         {% csrf_token %}
         <div class="row">
