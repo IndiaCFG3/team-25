@@ -1,5 +1,3 @@
-from django.conf.
-
 import patterns, include, url
 
 from django.contrib import admin
@@ -20,6 +18,7 @@ urlpatterns = patterns('',
 
 
 
+# # -*- coding: utf-8 -*-
 # from django_twilio.decorators import twilio_view
 # from twilio.twiml.messaging_response import MessagingResponse
 
