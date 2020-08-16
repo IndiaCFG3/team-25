@@ -31,7 +31,7 @@ def login_view(request):
     login(request, user)
     return HttpResponseRedirect("/")
 
-@login_required(LOGIN_URL="/auth/login/")
+@login_required(login_url="/auth/login/")
 def logout_view(request):
     logout(request)
     return HttpResponseRedirect("/auth/login/")
