@@ -9,7 +9,7 @@ class Announcements(models.Model):
     body = models.TextField(max_length=100, blank=True, null=True)
 
     def __str__(self):
-        return self.class_id + " " + self.title[0:10] + "..."
+        return self.title
 
 
 
