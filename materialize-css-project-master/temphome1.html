@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Materialize Dropdowns Example</title>
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1">      
+    <link rel = "stylesheet"
+       href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel = "stylesheet"
+       href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <script type = "text/javascript"
+       src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+    </script> 
+</head>
+
+<!-- navbar -->
+<header>
+   <nav class="nav-wrapper">
+           <div class="container">
+               <a href=" " class="brand-logo" id="title">Teacher's PORTAL</a>
+               <a href="" class="sidenav-trigger" data-target="mobile-menu">
+                       <i class="material-icons left" >menu</i>
+               </a>
+               
+               <ul class="hide-on-med-and-down  right">
+                   <li><a href="#photos">Announcements</a></li>
+                   <li><a href="#services">Resources</a></li>
+                   <li><a href="#contact">Analysis</a></li>
+                   <li><a href='#' class="tooltipped btn-floating btn-small indigo " data-tooltip="Your Profile"><i class="material-icons">person</i></a></li>
+               </ul>
+               <ul class="sidenav grey lighten-2 "  id="mobile-menu">
+                       <li><a href="#photos">Announcements</a></li>
+                       <li><a href="#services">Resources</a></li>
+                       <li><a href="#contact">Analysis</a></li>
+               </ul>
+
+           </div>
+       </nav>
+</header>
+
+<body class = "container"> 
+    <h3>Drop Down Example</h3>
+    <ul id = "dropdown" class = "dropdown-content">
+       <li><a href = "#">Inbox<span class = "badge">12</span></a></li>
+       <li><a href = "#!">Unread<span class = "new badge">4</span></a></li>
+       <li><a href = "#">Sent</a></li>
+       <li class = "divider"></li>
+       <li><a href = "#">Outbox<span class = "badge">14</span></a></li>
+    </ul>
+    
+    <a class = "btn dropdown-button" href = "#" data-activates = "dropdown">Mail Box
+       <i class = "mdi-navigation-arrow-drop-down right"></i></a>	 
+ </body>
+</html>
