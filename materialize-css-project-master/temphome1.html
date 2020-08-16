@@ -1,3 +1,5 @@
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,7 +13,29 @@
     <script type = "text/javascript"
        src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
-    </script> 
+    </script>
+    <style>
+      header{
+          background-color:#FFFFFF;
+          background-size:cover ;
+          background-repeat: no-repeat;
+          min-height: 90px;
+          background-position: center;
+      }
+      @media screen and (max-width:670px){
+        header,
+        footer {
+            padding-left: 0;
+        }
+      }
+      #title{
+          font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+      .section{
+          padding-top:4vw;
+          padding-bottom:4vw;
+      }
+  </style> 
 </head>
 
 <!-- navbar -->
@@ -40,13 +64,11 @@
 </header>
 
 <body class = "container"> 
-    <h3>Drop Down Example</h3>
     <ul id = "dropdown" class = "dropdown-content">
-       <li><a href = "#">Inbox<span class = "badge">12</span></a></li>
-       <li><a href = "#!">Unread<span class = "new badge">4</span></a></li>
-       <li><a href = "#">Sent</a></li>
-       <li class = "divider"></li>
-       <li><a href = "#">Outbox<span class = "badge">14</span></a></li>
+       <li><a href = "#">Grade 1</a></li>
+       <li><a href = "#!">Grade 2</a></li>
+       <li><a href = "#">Grade 3</a></li>
+       <li><a href = "#">Grade 4</a></li>
     </ul>
     
     <a class = "btn dropdown-button" href = "#" data-activates = "dropdown">Mail Box
