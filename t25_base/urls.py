@@ -27,6 +27,8 @@ urlpatterns = [
     path('forum/', include('spirit.urls')),
     path('', include('home.urls')),
     path('classpage/', include("classroom.urls")),
+    path('analytics/', include('analytics.urls')),
+    path('', include('home.urls')),
     # path('auth/', admin.site.urls),
 ]
 

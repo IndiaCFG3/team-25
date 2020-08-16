@@ -13,6 +13,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <style>
+        header{
+          background:url("/static/home/img/studydesk.jpg");
+          background-size:cover;
+          background-repeat: no-repeat;
+          min-height: 500px;
+          background-position: center;
+          z-index: 1;
+        }
         .compose {
             display: inline;
             font-size: 2em;
@@ -53,12 +61,36 @@
 </head>
 
 <body>
+    <!-- navbar -->
+  <header>
+    <nav class="nav-wrapper">
+            <div class="container">
+                <a href="base.html" class="brand-logo black-text" id="title">Teacher's PORTAL</a>
+                <a href="" class="sidenav-trigger" data-target="mobile-menu">
+                        <i class="material-icons left" >menu</i>
+                </a>
+                
+                <ul class="hide-on-med-and-down  right grey-text text-grey-darken-3">
+                    <li class="grey-text grey-darken-3"><a href="#services">Resources</a></li>
+                    <li class="grey-text grey-darken-3"><a href="#contact">Analysis</a></li>
+                    <li class="grey-text grey-darken-3" ><a href='#' class="tooltipped btn-floating btn-small indigo " data-tooltip="Your Profile"><i class="material-icons">person</i></a></li>
+                </ul>
+                <ul class="sidenav grey lighten-2 "  id="mobile-menu">
+                        <li><a href="#photos">Announcements</a></li>
+                        <li><a href="#services">Resources</a></li>
+                        <li><a href="#contact">Analysis</a></li>
+                        <li><a href="{% url 'logout' %}" class="btn teal center"><span>Logout</span></a></li>
+                </ul>
+
+            </div>
+        </nav>
+</header>
     <main>
-        <div class="container-fluid back">
-            <a class="btn-floating btn-large waves-effect waves-light blue" href="javascript:history.go(-1)"><i
+        <!-- <div class="container-fluid back">
+            <a class="btn-floating btn-large waves-effect waves-light blue" href="javascript:history.go(-1);"><i
                     class="material-icons">arrow_back</i></a>
             <p class="back-text">Go Back</p>
-        </div>
+        </div> -->
         <div class="container">
             <h2>Announcer</h2>
             <div class="container-fluid">

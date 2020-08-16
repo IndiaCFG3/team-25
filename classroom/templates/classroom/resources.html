@@ -11,6 +11,8 @@
     <a href="/classpage/addresource/">Click here to add resource!</a>
     {% for resource in resources %}
     <div>
+        <p>{{ resource.name }}</p>
+        <br />
         {% if resource.file %}
         <a href="{{ resource.file.url }}" download>Resource File! Click to Download</a>
         {% endif %}
