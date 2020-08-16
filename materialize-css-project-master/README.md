@@ -1,2 +1,0 @@
-# materialize-css-project
-Tutorial 
