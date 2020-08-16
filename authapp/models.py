@@ -22,7 +22,7 @@ class UserProfile(models.Model):
     isTeacher = models.BooleanField(default=False)
     phone = models.CharField(max_length=20, default="")
     subject = models.CharField(max_length=20, blank=True, null=True)
-    classroom = models.ForeignKey(ClassRoom, related_name="classroom", on_delete=models.CASCADE)
+    classroom = models.ForeignKey(ClassRoom, related_name="classroom", on_delete=models.CASCADE, null=True, blank=True)
     isFeaturePhone = models.BooleanField(default=False)
 
     def __str__(self):
