@@ -1,0 +1,171 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <title>Teachers Portal</title>
+  <style>
+      header{
+          background-color:#FFFFFF;
+          background-size:cover ;
+          background-repeat: no-repeat;
+          min-height: 100px;
+          background-position: center;
+      }
+      @media screen and (max-width:670px){
+        header,
+        footer {
+            padding-left: 0;
+        }
+      }
+      #title{
+          font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+      .section{
+          padding-top:4vw;
+          padding-bottom:4vw;
+      }
+      /* Dropdown Button */
+    .dropbtn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+    }
+    
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {background-color: #ddd;}
+    
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {display: block;}
+    
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    .dropdown:hover .dropbtn {background-color: #3e8e41;}
+  </style>
+</head>
+<body>
+
+  <!-- navbar -->
+  <header>
+        <nav class="nav-wrapper">
+                <div class="container">
+                    <a href=" " class="brand-logo" id="title">Teacher's PORTAL</a>
+                    <a href="" class="sidenav-trigger" data-target="mobile-menu">
+                            <i class="material-icons left" >menu</i>
+                    </a>
+                    
+                    <ul class="hide-on-med-and-down  right">
+                        <li><a href="#photos">Announcements</a></li>
+                        <li><a href="#services">Resources</a></li>
+                        <li><a href="#contact">Analysis</a></li>
+                        <li><a href='#' class="tooltipped btn-floating btn-small indigo " data-tooltip="Your Profile"><i class="material-icons">person</i></a></li>
+                    </ul>
+
+                    <ul class="sidenav grey lighten-2 "  id="mobile-menu">
+                            <li><a href="#photos">Announcements</a></li>
+                            <li><a href="#services">Resources</a></li>
+                            <li><a href="#contact">Analysis</a></li>
+                    </ul>
+
+                </div>
+            </nav>
+</header>
+
+  <!-- photo / grid -->
+
+  <div class="row">
+    <a href="#!">
+      <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
+        <div class="dropdown">
+            <button class="dropbtn">Dropdown</button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div> 
+      </div>
+    </a>
+ 
+
+  <!-- footer -->
+  <footer class="page-footer indigo lighten-3">
+      <div class="container">
+          <div class="row">
+              <div class="col s12 l6">
+                  <h4>About Me</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ullamcorper tristique enim at fermentum. Etiam interdum dui ut metus mollis vehicula.</p>
+              </div>
+              <div class="col s12 l5 offset-l1">
+                    <h4>Connect</h4>
+                    <ul class="info">
+                        <li>
+                            <i class="material-icons left">phone</i>
+                            <p>98748488</p>
+                        </li>
+                        <li>
+                            <i class="material-icons left">email</i>
+                            <p>example@example.com</p>
+                        </li>
+                        <li>
+                            <i class="material-icons left">web</i>
+                            <a href="#" class="white-text">capturethis.com</a>
+                        </li>
+                    </ul>
+                </div>
+          </div>
+      </div>
+      <div class="footer-copyright indigo-darken-4"></div>
+      <div class="center-align container">&copy; 2020 CaptureThis</div>
+  </footer>
+
+  <!-- Compiled and minified JavaScript -->
+   
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function(){
+        $('.sidenav').sidenav();
+        $('.materialboxed').materialbox();
+        $('.parallax').parallax();
+        $('.tabs').tabs();
+        $('.datepicker').datepicker({
+            disableWeekends:true
+        });
+        $('.tooltipped').tooltip();
+        $('.scrollspy').scrollSpy();
+    });
+  </script>
+</body>
+</html>
