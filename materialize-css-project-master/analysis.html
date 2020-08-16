@@ -36,7 +36,7 @@
  
   <!-- navbar -->
   <header>
-        <nav class="nav-wrapper transparent">
+        <nav class="nav-wrapper teal-darken-3">
                 <div class="container">
                     <a href="base.html" class="brand-logo black-text" id="title">Teacher's PORTAL</a>
                     <a href="" class="sidenav-trigger" data-target="mobile-menu">
@@ -44,7 +44,7 @@
                     </a>
                     
                     <ul class="hide-on-med-and-down  right grey-text text-grey-darken-3">
-                        <li class="grey-text grey-darken-3"><a href="#photos">Announcements</a></li>
+                        <li class="grey-text text-grey-darken-3"><a href="#photos">Announcements</a></li>
                         <li class="grey-text grey-darken-3"><a href="#services">Resources</a></li>
                         <li class="grey-text grey-darken-3"><a href="#contact">Analysis</a></li>
                         <li class="grey-text grey-darken-3" ><a href='#' class="tooltipped btn-floating btn-small indigo " data-tooltip="Your Profile"><i class="material-icons">person</i></a></li>
@@ -58,29 +58,45 @@
                 </div>
             </nav>
 </header>
-
+<br><br>
   <!-- announcement cards -->
   <div class="container">
       <div class="col s12 l12">
         <div class="card">
           <div class="card-content">
-            <span class="card-title">Feedback on -CourseName-</span>
-            <h4>Teacher Name- Sangeeta Kamble</h4>
+            <span class="card-title">Feedback on Course - Science</span>
+            <hr>
+            <h6>Teacher Name- Sangeeta Kamble</h6>
             <br>
-            <
+            <h6><u>Progress Report</u></h6>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis aliquam orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+            <br>
+            <h6>% of Syllabus Completed - 65</h6>
+            <h6>% of Students Attending class - 45</h6>
+            <h6>% of performance in Tests/Quiz - 73</h6>
+            <br>
+            <h6><u>DATE OF COURSE EVALUATION</u>- 13/07/2020</h6>
           </div>
         </div>
       </div>
   </div>
-
-  <div class="container ">
+<br>
+<div class="container">
     <div class="col s12 l12">
-      <div class="card ">
+      <div class="card">
         <div class="card-content">
-          <span class="card-title">Feedback on -CourseName-</span>
+          <span class="card-title">Feedback on Course - English</span>
+          <hr>
+          <h6>Teacher Name- Sangeeta Kamble</h6>
+          <br>
+          <h6><u>Progress Report</u></h6>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis aliquam orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis aliquam orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis aliquam orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+          <br>
+          <h6>% of Syllabus Completed - 65</h6>
+          <h6>% of Students Attending class - 45</h6>
+          <h6>% of performance in Tests/Quiz - 73</h6>
+          <br>
+          <h6><u>DATE OF COURSE EVALUATION</u>- 13/07/2020</h6>
         </div>
       </div>
     </div>
@@ -138,7 +154,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col s5">
-                                <p>Percenatge of syllabus covered?</p>
+                                <p>% of syllabus covered?</p>
                             </div>
                             <div class="col s7">
                                     <p class="range-field">
@@ -151,7 +167,7 @@
                         <div class="container">
                                 <div class="row">
                                     <div class="col s5">
-                                        <p>Regularity of the Students</p>
+                                        <p>% of Attendence in class</p>
                                     </div>
                                     <div class="col s7">
                                             <p class="range-field">
@@ -164,7 +180,7 @@
                          <div class="container">
                                 <div class="row">
                                     <div class="col s5">
-                                             <p>Quiz and Test Performance</p>
+                                             <p>Average % of Performance in Quizes/ Tests</p>
                                     </div>
                                     <div class="col s7">
                                          <p class="range-field">
@@ -207,12 +223,8 @@
   <script>
     $(document).ready(function(){
         $('.sidenav').sidenav();
-        $('.materialboxed').materialbox();
         $('.parallax').parallax();
-        $('.tabs').tabs();
-        $('.datepicker').datepicker({
-            disableWeekends:true
-        });
+        $('.datepicker').datepicker();
         $('.tooltipped').tooltip();
         $('.scrollspy').scrollSpy();
     });
