@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources</title>
+</head>
+
+<body>
+    <a href="/classpage/addresource/">Click here to add resource!</a>
+    {% for resource in resources %}
+    <div>
+        <p>{{ resource.name }}</p>
+        <br />
+        {% if resource.file %}
+        <a href="{{ resource.file.url }}" download>Resource File! Click to Download</a>
+        {% endif %}
+        <br />
+        {% if resource.url %}
+        <a href="{{ resource.url }}">Clickable link!</a>
+        {% endif %}
+    </div>
+    <br />
+    {% endfor %}
+</body>
+
+</html>

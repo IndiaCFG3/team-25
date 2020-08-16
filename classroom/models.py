@@ -15,4 +15,6 @@ class Chapter(models.Model):
         return self.name
 
 class Resource(models.Model):
-    file = models.FileField()
+    name = models.TextField()
+    file = models.FileField(upload_to="resources/", null=True, blank=True)
+    url = models.URLField(blank=True, null=True)
