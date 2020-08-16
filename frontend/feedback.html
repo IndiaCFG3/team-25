@@ -58,12 +58,44 @@
                 </div>
             </nav>
 </header>
-<br><br>
-  <!-- announcement cards -->
+
+<!--Charts-->
+<section class="container section">
+    <div class="container">
+            <h2 class="teal-text text-darken-4 CENTER">GRAPHS AND ANALYTICS</h2> <br><br> 
+        <div class="row">
+            <div class="col l6 s12 pull-l3">
+                    <h4 class="teal-text  center"><u>Performance Report</u></h4><br>
+                    <!-- line chart canvas element -->
+                            <canvas id="attendence" width="600" height="400"></canvas>
+                            
+                   
+                     
+            </div>
+            <div class="col l6 s12 push-l3">
+                    <h4 class="teal-text  center offset-l2"><u>Performance Report</u></h4><br>
+                    <canvas id="accuracy" width="600" height="400"></canvas>
+             </div>
+        </div>
+     </div>
+</section>
+
+<!-- parallax -->
+<div class="parallax-container">
+    <div class="parallax">
+        <img src="img/graphs.jpg" alt="img not found" class="responsive-img">
+    </div>
+</div>
+
+
+<section class="container section scrollSpy" >
   <div class="container">
+        <h2 class="teal-text text-darken-4 CENTER">F E E D B A C K </h2>   
       <div class="col s12 l12">
         <div class="card">
           <div class="card-content">
+                
+                <br><br>
             <span class="card-title">Feedback on Course - Science</span>
             <hr>
             <h6>Teacher Name- Sangeeta Kamble</h6>
@@ -87,36 +119,40 @@
         <div class="card-content">
           <span class="card-title">Feedback on Course - English</span>
           <hr>
-          <h6>Teacher Name- Sangeeta Kamble</h6>
+          <h6>Teacher Name- Rishabh Kumar</h6>
           <br>
           <h6><u>Progress Report</u></h6>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis aliquam orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
           <br>
-          <h6>% of Syllabus Completed - 65</h6>
-          <h6>% of Students Attending class - 45</h6>
-          <h6>% of performance in Tests/Quiz - 73</h6>
+          <h6>% of Syllabus Completed - 35</h6>
+          <h6>% of Students Attending class - 85</h6>
+          <h6>% of performance in Tests/Quiz - 33</h6>
           <br>
           <h6><u>DATE OF COURSE EVALUATION</u>- 13/07/2020</h6>
         </div>
       </div>
     </div>
 </div>
+</section>
   <br>
 <div class="container center">
     <a href="#feedback" class="btn-floating teal-lighten-2 center"><span>+</span></a>
 </div>
 <br><br>
     
+
+
+
 <!-- parallax -->
-  <div class="parallax-container">
+<div class="parallax-container">
     <div class="parallax">
         <img src="img/books.jpg" alt="img not found" class="responsive-img">
     </div>
 </div>
-
 <!--feedback form-->
 <section class="section container scrollspy" id="feedback">
     <div class="row">
+            
         <div class="col l5 s12">
             <h2 class="indigo-text text darken-4">Course Evaluation </h2>
             <br>
@@ -210,6 +246,8 @@
     </div>
 </section>
 
+
+
   <!-- footer -->
   <footer class="page-footer brown lighten-3">
      
@@ -217,6 +255,7 @@
   </footer>
 
   <!-- Compiled and minified JavaScript -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js'></script>
    
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
@@ -229,5 +268,55 @@
         $('.scrollspy').scrollSpy();
     });
   </script>
+  <script>
+        // line chart data
+        var attendencePercentage = {
+            labels : ["March","April","May","June","July","August"],
+            datasets : [
+            {
+                fillColor : "rgba(172,194,132,0.4)",
+                strokeColor : "#ACC26D",
+                pointColor : "#fff",
+                pointStrokeColor : "#9DB86D",
+                data : [65,59,67,75,83,81]
+            }
+        ]
+        }
+        
+        var attendence = document.getElementById('attendence').getContext('2d');
+        new Chart(attendence).Line(attendencePercentage);
+
+        // bar chart data
+        var barData = {
+                labels : ["Q1","Q2","Q3","Q4","Q5"],
+                datasets : [
+                    
+                    {
+                        fillColor : "rgba(73,188,170,0.4)",
+                        strokeColor : "rgba(72,174,209,0.4)",
+                        data : [45,88,64,45,33]
+                    },
+                    {
+                        fillColor : "rgba(45,45,170,0.4)",
+                        strokeColor : "rgba(42,47,209,0.4)",
+                        data : [65,38,84,55,63]
+                    },
+                    {
+                        fillColor : "rgba(73,188,15,0.4)",
+                        strokeColor : "rgba(72,174,20,0.4)",
+                        data : [23,82,44,85,13]
+                    },
+                    {
+                        fillColor : "rgba(15,18,17,0.4)",
+                        strokeColor : "rgba(12,14,29,0.4)",
+                        data : [72,18,95,65,37]
+                    }
+                ]
+            }
+            // get bar chart canvas
+            var correctAnswers = document.getElementById("accuracy").getContext("2d");
+            // draw bar chart
+            new Chart(correctAnswers).Bar(barData);
+</script>
 </body>
 </html>

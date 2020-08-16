@@ -44,5 +44,12 @@ def send(request):
                                   body=request.POST['body'])
                 a.save()
                 print(message.sid)
+
+            for user in students_whatsapp:
+                message = client.messages.create(body=body + "   " + link, from_="whatsapp:+12058585073", to="+91" + user.phone)
+
+
+
+
         except:
             print("Some error occured")
