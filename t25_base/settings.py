@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'true_false',
     'essay',
     'classroom',
+    'analytics',
 
     'spirit.core',
     'spirit.admin',
