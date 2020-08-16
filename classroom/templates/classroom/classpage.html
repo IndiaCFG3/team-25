@@ -44,7 +44,7 @@
 
   <!-- navbar -->
   <header>
-    <nav class="nav-wrapper">
+    <nav class="nav-wrapper purple">
       <div class="container">
         <a href=" " class="brand-logo" id="title">Teacher's PORTAL</a>
         <a href="" class="sidenav-trigger" data-target="mobile-menu">
@@ -172,13 +172,41 @@
 
           <div class="col s1">&nbsp;</div>
           <div class="col s1">&nbsp;</div>
-
-
         </div>
       </div>
     </div>
-
   </div>
+
+  {% if course %}
+  <div class="row">
+    <div class="col s6">
+      <div style="padding: 35px;" align="center" class="card">
+        <div class="row">
+          <div class="left card-title">
+            <b>{{ course.name }}</b>
+          </div>
+        </div>
+
+        <div class="row">
+          {% for c in chapter %}
+          <a href="#!">
+            <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
+              <i class="indigo-text text-lighten-1 large material-icons">view_list</i>
+              <span class="indigo-text text-lighten-1">
+                <h5>{{ c.name }}</h5>
+              </span>
+            </div>
+          </a>
+
+          <div class="col s1">&nbsp;</div>
+          <div class="col s1">&nbsp;</div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
   <div class="input-field center">
     <a href="#addcourse" class="btn-floating btn-large waves-effect waves-light red"><i
         class="material-icons">add</i></a>
@@ -187,7 +215,7 @@
   <!-- parallax -->
   <div class="parallax-container">
     <div class="parallax">
-      <img src="img/courses.png" alt="img not found" class="responsive-img">
+      <img src="/static/img/courses.png" alt="img not found" class="responsive-img">
     </div>
   </div>
 
@@ -196,22 +224,20 @@
 
       <div class="col s12 l5 offset-l2">
         <h4 class="indigo-text text darken-4">Fill the Details</h4>
-        <form action="">
-
-
+        <form method="POST">
+          {% csrf_token %}
           <div class="input-field">
             <i class="material-icons prefix">book</i>
-            <input id="cname" type="text" class="validate">
+            <input id="cname" type="text" class="validate" name="course_name" required>
             <label for="cname">Course Name</label>
           </div>
 
           <div class="input-field">
             <i class="material-icons prefix ">message</i>
-
-            <textarea name="" id="message" cols="50" rows="10" class="materialize-textarea"></textarea>
+            <textarea name="chapter_name" id="message" cols="50" rows="10" class="materialize-textarea"
+              required></textarea>
             <label for="message">Chapter Name</label>
           </div>
-
 
           <div class="input-field left">
             <button class="btn waves-effect waves-light" type="submit" name="action">Submit
