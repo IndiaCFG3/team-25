@@ -22,5 +22,7 @@ urlpatterns = [
     # path('auth/', include('authapp.urls')),
     path('webhook/', include('qna.urls')),
     path('quiz/', include('quiz.urls')), 
+    path('forum/', include('spirit.urls')),
+     
     # path('auth/', admin.site.urls),
 ]

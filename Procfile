@@ -1,0 +1,1 @@
+web: gunicorn t25_base.wsgi --log-file -

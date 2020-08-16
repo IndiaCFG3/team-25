@@ -45,6 +45,37 @@ INSTALLED_APPS = [
     'multichoice',
     'true_false',
     'essay',
+
+    'spirit.core',
+    'spirit.admin',
+    'spirit.search',
+
+    'spirit.user',
+    'spirit.user.admin',
+    'spirit.user.auth',
+
+    'spirit.category',
+    'spirit.category.admin',
+
+    'spirit.topic',
+    'spirit.topic.admin',
+    'spirit.topic.favorite',
+    'spirit.topic.moderate',
+    'spirit.topic.notification',
+    'spirit.topic.private',
+    'spirit.topic.unread',
+
+    'spirit.comment',
+    'spirit.comment.bookmark',
+    'spirit.comment.flag',
+    'spirit.comment.flag.admin',
+    'spirit.comment.history',
+    'spirit.comment.like',
+    'spirit.comment.poll',
+
+    'djconfig',
+    'haystack',
+
 ]
 
 MIDDLEWARE = [
@@ -55,6 +86,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'djconfig.middleware.DjConfigMiddleware',
+    
 ]
 
 ROOT_URLCONF = 't25_base.urls'
@@ -88,6 +121,24 @@ DATABASES = {
     }
 }
 
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
+        'PATH': os.path.join(BASE_DIR, 'st_search'),
+    },
+}
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
+        'LOCATION': 'spirit_cache',
+    },
+    'st_rate_limit': {
+        'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
+        'LOCATION': 'spirit_rl_cache',
+        'TIMEOUT': None
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -121,6 +172,9 @@ USE_L10N = True
 
 USE_TZ = True
 
+# STATICFILES_DIRS = (
+#     os.path.join(PROJECT_ROOT, 'static')
+#     )
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
