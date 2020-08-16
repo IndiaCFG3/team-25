@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'multichoice',
     'true_false',
     'essay',
+    'classroom',
 
     'spirit.core',
     'spirit.admin',
