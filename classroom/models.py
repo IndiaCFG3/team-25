@@ -13,3 +13,6 @@ class Chapter(models.Model):
 
     def __str__(self):
         return self.name
+
+class Resource(models.Model):
+    file = models.FileField()

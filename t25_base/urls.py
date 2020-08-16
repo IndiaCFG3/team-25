@@ -24,6 +24,7 @@ urlpatterns = [
     path('quiz/', include('quiz.urls')), 
     path('forum/', include('spirit.urls')),
     path('analytics/', include('analytics.urls')),
-    path('', include('home.urls'))
+    path('classpage', include("classroom.urls")),
+    path('', include('home.urls')),
     # path('auth/', admin.site.urls),
 ]
