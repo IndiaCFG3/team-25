@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Announcements</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <style>
+        .compose {
+            display: inline;
+            font-size: 2em;
+            font-weight: 400;
+        }
+
+        .history {
+            margin-top: 4em;
+            padding-top: 1em;
+            padding-bottom: 1em;
+        }
+
+        .log {
+            padding-left: 0.7em;
+            padding-top: 0.1em;
+            padding-bottom: 0.002em;
+        }
+
+        .back {
+            margin: 1em;
+        }
+
+        .back-text {
+            display: inline;
+            font-size: 1.5em;
+        }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="container-fluid back">
+            <a class="btn-floating btn-large waves-effect waves-light blue" href="/"><i
+                    class="material-icons">arrow_back</i></a>
+            <p class="back-text">Go Back</p>
+        </div>
+        <div class="container">
+            <h2>Announcer</h2>
+            <div class="container-fluid">
+                <a class="btn-floating btn-large waves-effect waves-light blue" href="/announcements/compose/"><i
+                        class="material-icons">add</i></a>
+                <p class="compose">Compose new</p>
+            </div>
+            <div class="container-fluid history">
+                <h4>History</h4>
+                {% if history %}
+                <ul class="alert alert-info messages">
+                    {% for h in history %}
+                    <li class="">
+                        <div class="conatiner-fluid z-depth-1 card-panel log grey lighten-5">
+                            <h6>{{ h.class_id.name }}</h6>
+                            <p>
+                                <strong>[{{ h.title }}]</strong>
+                                {{ h.body | truncatechars:80 }}
+                            </p>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
