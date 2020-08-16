@@ -18,8 +18,9 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('announcements/', include('announcements.urls')),
-    path('auth/', include('authapp.urls')),
+    # path('announcements/', include('announcements.urls')),
+    # path('auth/', include('authapp.urls')),
     path('webhook/', include('qna.urls')),
+    path('quiz/', include('quiz.urls')), 
     # path('auth/', admin.site.urls),
 ]
