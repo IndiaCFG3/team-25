@@ -48,6 +48,8 @@ def twilio(request):
 def webhook(request):
     # build a request object
     req = json.loads(request.body)
+    # print(json.dumps(req, indent=4))
+    # print(req)
     
     # get action from json
     action = req.get('queryResult').get('action')
