@@ -1,0 +1,233 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <title>Teachers Portal</title>
+  <style>
+      header{
+          background:url(img/studydesk.jpg);
+          background-size:cover ;
+          background-repeat: no-repeat;
+          min-height: 1000px;
+          background-position: center;
+      }
+      @media screen and (max-width:670px){
+          header{
+              min-height: 500px;
+          }
+      }
+      #title{
+          font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+      .section{
+          padding-top:4vw;
+          padding-bottom:4vw;
+      }
+  </style>
+</head>
+<body>
+ 
+  <!-- navbar -->
+  <header>
+        <nav class="nav-wrapper transparent">
+                <div class="container">
+                    <a href="base.html" class="brand-logo black-text" id="title">Teacher's PORTAL</a>
+                    <a href="" class="sidenav-trigger" data-target="mobile-menu">
+                            <i class="material-icons left" >menu</i>
+                    </a>
+                    
+                    <ul class="hide-on-med-and-down  right grey-text text-grey-darken-3">
+                        <li><a href="#photos"  class="black-text">Announcements</a></li>
+                        <li class="grey-text grey-darken-3"><a href="#services" class="black-text">Resources</a></li>
+                        <li class="grey-text grey-darken-3"><a href="#contact" class="black-text">Analysis</a></li>
+                        <li class="grey-text grey-darken-3" ><a href='#' class="tooltipped btn-floating btn-small brown accent-3 " data-tooltip="Your Profile"><i class="material-icons">person</i></a></li>
+                    </ul>
+                    <ul class="sidenav grey lighten-2 "  id="mobile-menu">
+                            <li><a href="#photos">Announcements</a></li>
+                            <li><a href="#services">Resources</a></li>
+                            <li><a href="#contact">Analysis</a></li>
+                    </ul>
+
+                </div>
+            </nav>
+</header>
+<br><br>
+  <!-- announcement cards -->
+  <div class="container">
+      <div class="col s12 l12">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">Feedback on Course - Science</span>
+            <hr>
+            <h6>Teacher Name- Sangeeta Kamble</h6>
+            <br>
+            <h6><u>Progress Report</u></h6>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis aliquam orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+            <br>
+            <h6>% of Syllabus Completed - 65</h6>
+            <h6>% of Students Attending class - 45</h6>
+            <h6>% of performance in Tests/Quiz - 73</h6>
+            <br>
+            <h6><u>DATE OF COURSE EVALUATION</u>- 13/07/2020</h6>
+          </div>
+        </div>
+      </div>
+  </div>
+<br>
+<div class="container">
+    <div class="col s12 l12">
+      <div class="card">
+        <div class="card-content">
+          <span class="card-title">Feedback on Course - English</span>
+          <hr>
+          <h6>Teacher Name- Sangeeta Kamble</h6>
+          <br>
+          <h6><u>Progress Report</u></h6>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis aliquam orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+          <br>
+          <h6>% of Syllabus Completed - 65</h6>
+          <h6>% of Students Attending class - 45</h6>
+          <h6>% of performance in Tests/Quiz - 73</h6>
+          <br>
+          <h6><u>DATE OF COURSE EVALUATION</u>- 13/07/2020</h6>
+        </div>
+      </div>
+    </div>
+</div>
+  <br>
+<div class="container center">
+    <a href="#feedback" class="btn-floating teal-lighten-2 center"><span>+</span></a>
+</div>
+<br><br>
+    
+   <!-- parallax -->
+  <div class="parallax-container">
+    <div class="parallax">
+        <img src="img/books.jpg" alt="img not found" class="responsive-img">
+    </div>
+</div>
+
+<!--feedback form-->
+<section class="section container scrollspy" id="feedback">
+    <div class="row">
+        <div class="col l5 s12">
+            <h2 class="indigo-text text darken-4">Course Evaluation </h2>
+            <br>
+            <hr>
+            <h5>Track the progress of the course you are teaching as well as the student response and performance</h5>
+            
+        </div>
+
+        <div class="col s12 l5 offset-l2">
+                <h4 class="indigo-text text darken-4">Fill the Details</h4>
+                <form action="">
+                                      
+                    <div class="input-field">
+                            <i class="material-icons prefix">person</i>
+                            <input id="name" type="text" class="validate">
+                            <label for="name">Full Name</label>
+                    </div>
+
+                    <div class="input-field">
+                        <i class="material-icons prefix">book</i>
+                        <input id="cname" type="text" class="validate">
+                        <label for="cname">Course Name</label>
+                 </div>
+
+                    <div class="input-field">
+                    <i class="material-icons prefix ">message</i>
+
+                        <textarea name="" id="message" cols="50" rows="10" class="materialize-textarea"></textarea>
+                        <label for="message">Progress Report</label>
+                    </div>
+
+                    <br>
+
+                    <h6 class="teal-text"><u><b>Track the progress!</b></u></h6>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col s5">
+                                <p>% of syllabus covered?</p>
+                            </div>
+                            <div class="col s7">
+                                    <p class="range-field">
+                                            <input type="range" id="test1" min="0" max="100" />
+                                          </p>
+                            </div>
+                        </div>
+                    </div>
+
+                        <div class="container">
+                                <div class="row">
+                                    <div class="col s5">
+                                        <p>% of Attendence in class</p>
+                                    </div>
+                                    <div class="col s7">
+                                            <p class="range-field">
+                                                    <input type="range" id="test2" min="0" max="100" />
+                                                  </p>
+                                    </div>
+                                </div>
+                         </div>
+                        
+                         <div class="container">
+                                <div class="row">
+                                    <div class="col s5">
+                                             <p>Average % of Performance in Quizes/ Tests</p>
+                                    </div>
+                                    <div class="col s7">
+                                         <p class="range-field">
+                                         <input type="range" id="test3" min="0" max="100" />
+                                         </p>
+                                    </div>
+                            </div>  
+                    </div>
+                    
+                        
+                 
+
+
+                    <div class="input-field">
+                         <i class="material-icons prefix ">event</i>
+    
+                            <input type='text' id='date' class="datepicker">
+                            <label for="date">Date of Evaluation</label>
+                        </div>
+
+                        
+                         <div class="input-field center">
+                             <button class="btn purple darken-3">Submit</button>
+                         </div>
+                </form>
+        </div>
+    </div>
+</section>
+
+  <!-- footer -->
+  <footer class="page-footer indigo darken-3">
+     
+      <div class="center-align container">&copy; 2020 TeachersPortal</div>
+  </footer>
+
+  <!-- Compiled and minified JavaScript -->
+   
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function(){
+        $('.sidenav').sidenav();
+        $('.parallax').parallax();
+        $('.datepicker').datepicker();
+        $('.tooltipped').tooltip();
+        $('.scrollspy').scrollSpy();
+    });
+  </script>
+</body>
+</html>

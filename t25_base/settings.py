@@ -40,8 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'qna',
     'announcements',
-
-    
+    'home',
     'quiz',
     'multichoice',
     'true_false',
