@@ -23,7 +23,8 @@ urlpatterns = [
     path('webhook/', include('qna.urls')),
     path('quiz/', include('quiz.urls')), 
     path('forum/', include('spirit.urls')),
-    path('', include('home.urls')),
+    path('analytics/', include('analytics.urls')),
     path('classpage', include("classroom.urls")),
+    path('', include('home.urls')),
     # path('auth/', admin.site.urls),
 ]
