@@ -31,6 +31,7 @@
           padding-bottom:4vw;
       }
   </style>
+  
 </head>
 <body>
  
@@ -60,6 +61,7 @@
 </header>
 
   <!-- announcement cards -->
+  <br>
   <div class="container">
       <div class="col s12 l12">
         <div class="card">
@@ -141,6 +143,12 @@
                                <p>
                                 <label>
                                         <input type="checkbox">
+                                        <span>Meeting Summary</span>
+                                        </label>
+                           </p>
+                               <p>
+                                <label>
+                                        <input type="checkbox">
                                         <span>Notice</span>
                                         </label>
                            </p>
@@ -196,6 +204,12 @@
         });
         $('.tooltipped').tooltip();
         $('.scrollspy').scrollSpy();
+        $(document).ready(function() { 
+                $('input[type="checkbox"]').click(function() { 
+                    var inputValue = $(this).attr("value"); 
+                    $("." + inputValue).toggle(); 
+                }); 
+            });
     });
   </script>
 </body>
