@@ -2,6 +2,7 @@ from django.shortcuts import render, HttpResponseRedirect
 from django.contrib.auth.models import User
 from authapp.models import UserProfile
 from django.contrib.auth import login, logout, authenticate
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def signup(request):
@@ -29,3 +30,8 @@ def login_view(request):
         return render(request, "authapp/loginpage.html", {"error": "Invalid Credentials"})
     login(request, user)
     return HttpResponseRedirect("/")
+
+@login_required(login_url="/auth/login/")
+def logout_view(request):
+    logout(request)
+    return HttpResponseRedirect("/auth/login/")
