@@ -1,3 +1,5 @@
+script.py
+
 *.log
 
 *.pot
@@ -12,7 +14,7 @@ db.sqlite3-journal
 
 media
 
-static
+
 
 */migrations/*
 
