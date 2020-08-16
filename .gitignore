@@ -4,7 +4,7 @@
 
 *.pyc
 
-__pycache__
+*/__pycache__/*
 
 db.sqlite3
 
@@ -15,3 +15,10 @@ static
 */migrations/*
 
 .env
+
+Team*.zip
+*.pem
+*.ppk
+*.crt
+*.key
+*.ovpn
